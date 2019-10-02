@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+  <!-- Compiled and minified JavaScript -->
+  <title>Animal Shop</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="center">Animal Shop</h1>
+
+    <h3>Create Pet</h3>
+    <form action="#" id="petForm">
+      <div class="input-field">
+        <input type="text" name="name" id="name">
+        <label for="name">Pet Name: </label>
+      </div>
+
+      <div class="input-field">
+        <select id="species">
+          <option value="" disabled selected>Choose your pet's species</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="bird">Bird</option>
+        </select>
+        <label>Species</label>
+      </div>
+
+      <input type="submit" value="Create Pet" class="btn">
+    </form>
+
+    <h3>Animal List</h3>
+    <div id="petList">
+
+    </div>
+  </div>
+
+
+  <!-- javascript dependencies -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="javascripts/models/pet.js"></script>
+  <script src="javascripts/models/bird.js"></script>
+  <script src="javascripts/models/cat.js"></script>
+  <script src="javascripts/models/dog.js"></script>
+  <script src="javascripts/index.js"></script>
+
+  <!-- javascript initializers -->
+  <script>
+    $(document).ready(function () {
+      $('#species').formSelect();
+    });
+  </script>
+</body>
+</html>
